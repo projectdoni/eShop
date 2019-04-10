@@ -16,13 +16,8 @@ public class CUI {
 	 */
 	public static void main(String[] args) {
 		CUI cui;
-		try {
 			cui = new CUI();
 			cui.run();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
 
 	
@@ -39,7 +34,7 @@ public class CUI {
 	
 		// Hauptschleife der Benutzungsschnittstelle
 		do {
-			gibMenueAus();
+			printOutGuest();
 			try {
 				input = liesEingabe();
 				verarbeiteEingabe(input);
@@ -50,7 +45,7 @@ public class CUI {
 		} while (!input.equals("q"));
 	}
 	
-private void printOutCoustomer() {
+	private void printOutCoustomer() {
 		
 		System.out.print("         \n  Ausloggen:  'f'");
 		System.out.print("         \n  Artikel löschen: 'b'");
@@ -62,12 +57,21 @@ private void printOutCoustomer() {
 		System.out.print("> "); // Prompt
 		System.out.flush(); // ohne NL ausgeben
 	}
-	private void printOutStuff() {
+	private void printOutStaff() {
 		System.out.print("         \n  Ausloggen:  'f'");
 		System.out.print("         \n  Artikel löschen: 'b'");
 		System.out.print("         \n  Artikel suchen:  'c'");
 		System.out.print("         \n  Zum Warenkorb hinzufuegen: 'd'");
 		System.out.print("         \n  Artikel kaufen:  'e'");
+		System.out.print("         \n  ---------------------");
+		System.out.println("         \n  Beenden:        'q'");
+		System.out.print("> "); // Prompt
+		System.out.flush(); // ohne NL ausgeben
+	}
+	
+	private void printOutGuest() {
+		System.out.print("         \n  Einloggen:  'f'");
+		System.out.print("         \n  Artikel suchen:  'c'");
 		System.out.print("         \n  ---------------------");
 		System.out.println("         \n  Beenden:        'q'");
 		System.out.print("> "); // Prompt

@@ -1,5 +1,5 @@
-package src.domain;
+package domain;
 
-public class DoenerMangement {
+public class DoenerManagment {
 
 }

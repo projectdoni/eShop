@@ -9,7 +9,7 @@ import valueobjects.Kurs;
 public class KursBibliothek {
 
 	private UserManagment benutzer;
-	private KursManagment meineKurse;
+	private KursManagment meineKurse = new KursManagment();
 	
 	public List<Kurs> gibAlleKurse() {
 		// einfach delegieren an KursVerwaltung meineKurse

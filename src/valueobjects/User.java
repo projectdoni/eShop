@@ -12,7 +12,7 @@ public class User {
 		this.number = number;
 		this.email = email;
 		this.password = password;
-	};
+	}
 	
 	
 }

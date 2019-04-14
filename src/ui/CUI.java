@@ -164,7 +164,7 @@ public class CUI {
 	
 	/* 
 	 * 
-	 * Interne (private) Methode zum Ausgeben von Bücherlisten.
+	 * Interne (private) Methode zum Ausgeben von Kurslisten.
 	 *
 	 */
 	

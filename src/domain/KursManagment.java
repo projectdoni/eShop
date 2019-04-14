@@ -9,7 +9,7 @@ import valueobjects.Kurs;
 
 public class KursManagment {
 	
-	private List<Kurs> kursBestand = new Vector<Kurs>(500);
+	private List<Kurs> kursBestand = new Vector<Kurs>();
 	
 	public List<Kurs> getKursBestand() {
 		return new Vector<Kurs>(kursBestand);
@@ -20,7 +20,7 @@ public class KursManagment {
 			throw new KursExistiertBereitsException(einKurs, " - in 'einfuegen()'");
 		}
 
-		// das uebernimmt die BuchListe:
+		// das uebernimmt die KursListe:
 		kursBestand.add(einKurs);
 	}
 }

@@ -109,7 +109,8 @@ public class CUI {
 			break;
 			
 		case "b":
-			// Alle Kurse anzeigen
+			liste = bib.gibAlleKurse();
+			gibKurslisteAus(liste);
 			break;
 			
 		case "f":
@@ -161,15 +162,21 @@ public class CUI {
 		}
 	}
 	
-	/*private void gibBuecherlisteAus(List<Buch> liste) {
+	/* 
+	 * 
+	 * Interne (private) Methode zum Ausgeben von Bücherlisten.
+	 *
+	 */
+	
+	private void gibKurslisteAus(List<Kurs> liste) {
 		if (liste.isEmpty()) {
 			System.out.println("Liste ist leer.");
 		} else {
-			for (Buch buch: liste) {
-				System.out.println(buch);				
+			for (Kurs kurs: liste) {
+				System.out.println(kurs.toString());				
 			}
 		}
-	}*/ 
+	}
 	
 	
 }

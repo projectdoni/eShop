@@ -8,12 +8,26 @@ public class Kurs {
 	private double kursLaenge;
 	private String sprache;
 	
+
+
 	public Kurs(String kursName, int kursNummer, double preis, double kursLaenge, String sprache ) {
 	this.kursName = kursName;
 	this.kursNummer = kursNummer;
 	this.preis = preis;
 	this.kursLaenge = kursLaenge;
 	this.sprache = sprache;
+	}
+	
+	public double getPreis() {
+		return preis;
+	}
+
+	public double getKursLaenge() {
+		return kursLaenge;
+	}
+
+	public String getSprache() {
+		return sprache;
 	}
 	
 	public String getKursName() {
@@ -40,7 +54,14 @@ public class Kurs {
 		} 
 		return false;
 	}
+	
+	// Methode, damit Kursinfo ausgegeben werden kann
 
+	public String toString() {
+		String kursInfo;
+		kursInfo = "\n Name, Nummer: " + getKursName() + ", " + getKursNummer() + "\n Preis: " + getPreis() + "\n Kursdauer: " + getKursLaenge() + "\n Sprache: " + getSprache();
+		return kursInfo;
+	}
 
 	
 }

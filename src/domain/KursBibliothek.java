@@ -8,7 +8,7 @@ import valueobjects.Kurs;
 
 public class KursBibliothek {
 
-	private UserManagment benutzer;
+	private UserManagment benutzer = new UserManagment();
 	private KursManagment meineKurse = new KursManagment();
 	
 	public List<Kurs> gibAlleKurse() {

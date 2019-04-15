@@ -5,19 +5,20 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import domain.KursBibliothek;
-import domain.exceptions.KursExistiertBereitsException;
-import valueobjects.Kurs;
+import domain.GetraenkeLaden;
+import domain.exceptions.GetraenkExistiertBereitsException;
+import valueobjects.Getraenk;
 
 public class CUI {
 
 	//*private Bibliothek bib ist Schnittstelle 
 	private BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-	private KursBibliothek bib = new KursBibliothek();
+	private GetraenkeLaden bib = new GetraenkeLaden();
 	
 	/**
 	 * Die main-Methode...
 	 */
+	
 	public static void main(String[] args) {
 		CUI cui;
 			cui = new CUI();
@@ -100,7 +101,7 @@ public class CUI {
 		double preis;
 		double kursLaenge;
 		String sprache;
-		List<Kurs> liste;
+		List<Getraenk> liste;
 		
 		// Eingabe bearbeiten:
 		switch (line) {
@@ -110,7 +111,7 @@ public class CUI {
 			break;
 			
 		case "b":
-			liste = bib.gibAlleKurse();
+			liste = bib.gibAlleGetraenke();
 			gibKurslisteAus(liste);
 			break;
 			
@@ -119,11 +120,10 @@ public class CUI {
 			break;
 			
 		case "l":
-			// Kurs löschen
+			// Getraenk löschen
 			System.out.println("name ");
 			kursName = liesEingabe();
-			bib.loescheBuch(kursName);
-			
+			bib.loescheGetraenk(kursName);
 			break;
 			
 		case "s":
@@ -147,9 +147,9 @@ public class CUI {
 			
 
 			try {
-				bib.fuegeKursEin(kursName, kursNummer, preis, kursLaenge, sprache);
+				bib.fuegeGetraenkEin(kursName, kursNummer, preis, kursLaenge, sprache);
 				System.out.println("Einfuegen ok");
-			} catch (KursExistiertBereitsException e) {
+			} catch (GetraenkExistiertBereitsException e) {
 				// Hier Fehlerbehandlung...
 				System.out.println("Fehler beim EinfÃ¼gen");
 				e.printStackTrace();
@@ -173,11 +173,11 @@ public class CUI {
 	 *
 	 */
 	
-	private void gibKurslisteAus(List<Kurs> liste) {
+	private void gibKurslisteAus(List<Getraenk> liste) {
 		if (liste.isEmpty()) {
 			System.out.println("Liste ist leer.");
 		} else {
-			for (Kurs kurs: liste) {
+			for (Getraenk kurs: liste) {
 				System.out.println(kurs.toString());				
 			}
 		}

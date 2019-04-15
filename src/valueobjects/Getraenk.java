@@ -1,6 +1,6 @@
 package valueobjects;
 
-public class Kurs {
+public class Getraenk {
 
 	private String kursName;
 	private int kursNummer;
@@ -10,7 +10,7 @@ public class Kurs {
 	
 
 
-	public Kurs(String kursName, int kursNummer, double preis, double kursLaenge, String sprache ) {
+	public Getraenk(String kursName, int kursNummer, double preis, double kursLaenge, String sprache ) {
 	this.kursName = kursName;
 	this.kursNummer = kursNummer;
 	this.preis = preis;
@@ -18,7 +18,7 @@ public class Kurs {
 	this.sprache = sprache;
 	}
 	
-	public Kurs(String kursName) {
+	public Getraenk(String kursName) {
 		// TODO Auto-generated constructor stub
 		this.kursName = kursName;
 	}
@@ -52,8 +52,8 @@ public class Kurs {
 	}
 
 	public boolean equals(Object anderesObjekt) {
-		if (anderesObjekt instanceof Kurs) {
-			Kurs andererKurs = (Kurs) anderesObjekt;
+		if (anderesObjekt instanceof Getraenk) {
+			Getraenk andererKurs = (Getraenk) anderesObjekt;
 			return ((this.kursNummer == andererKurs.kursNummer)
 					&& (this.kursName.equals(andererKurs.kursName)));
 		} 
@@ -61,7 +61,7 @@ public class Kurs {
 	}
 	
 	// Methode, damit Kursinfo ausgegeben werden kann
-
+@Override
 	public String toString() {
 		String kursInfo;
 		kursInfo = "\n Name, Nummer: " + getKursName() + ", " + getKursNummer() + "\n Preis: " + getPreis() + "\n Kursdauer: " + getKursLaenge() + "\n Sprache: " + getSprache();

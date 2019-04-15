@@ -77,6 +77,7 @@ public class CUI {
 	private void printOutGuest() {
 		System.out.print("         \n  Einloggen:  'a'");
 		System.out.print("         \n  Kurs suchen:  's'");
+		System.out.print("         \n  Kurs loeschen: 'l'");
 		System.out.print("         \n  Alle Kurse anzeigen:  'b'");
 		System.out.print("         \n  ---------------------");
 		System.out.println("       \n  Beenden:        'q'");
@@ -119,6 +120,10 @@ public class CUI {
 			
 		case "l":
 			// Kurs löschen
+			System.out.println("name ");
+			kursName = liesEingabe();
+			bib.loescheBuch(kursName);
+			
 			break;
 			
 		case "s":

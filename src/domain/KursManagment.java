@@ -1,5 +1,5 @@
 package domain;
-
+import bib.local.valueobjects.Kurs;
 import java.util.List;
 import java.util.Vector;
 
@@ -22,5 +22,9 @@ public class KursManagment {
 
 		// das uebernimmt die KursListe:
 		kursBestand.add(einKurs);
+	}
+	
+	public void loeschen(Kurs einKurs) {
+		kursBestand.remove(einKurs);
 	}
 }

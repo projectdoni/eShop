@@ -2,6 +2,7 @@ package domain;
 
 import java.util.List;
 
+
 import domain.exceptions.KursExistiertBereitsException;
 import valueobjects.Kurs;
 
@@ -22,4 +23,8 @@ public class KursBibliothek {
 		return b;
 	}
 	
+	public void loescheBuch(String kursName) {
+		Kurs course = new Kurs(kursName);
+		meineKurse.loeschen(course);
+	}
 }

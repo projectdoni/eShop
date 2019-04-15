@@ -18,6 +18,11 @@ public class Kurs {
 	this.sprache = sprache;
 	}
 	
+	public Kurs(String kursName) {
+		// TODO Auto-generated constructor stub
+		this.kursName = kursName;
+	}
+
 	public double getPreis() {
 		return preis;
 	}

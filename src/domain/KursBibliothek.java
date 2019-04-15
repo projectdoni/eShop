@@ -2,7 +2,6 @@ package domain;
 
 import java.util.List;
 
-import bib.local.valueobjects.Buch;
 import domain.exceptions.KursExistiertBereitsException;
 import valueobjects.Kurs;
 

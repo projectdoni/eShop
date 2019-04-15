@@ -1,5 +1,4 @@
 package domain;
-import bib.local.valueobjects.Kurs;
 import java.util.List;
 import java.util.Vector;
 

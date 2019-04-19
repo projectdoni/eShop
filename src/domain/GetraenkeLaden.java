@@ -9,7 +9,7 @@ import valueobjects.Getraenk;
 public class GetraenkeLaden {
 
 	private UserManagment benutzer = new UserManagment();
-	private GetränkeManagment meineGetraenke = new GetränkeManagment();
+	private GetraenkeManagment meineGetraenke = new GetraenkeManagment();
 	
 	public List<Getraenk> gibAlleGetraenke() {
 		// einfach delegieren an KursVerwaltung meineKurse

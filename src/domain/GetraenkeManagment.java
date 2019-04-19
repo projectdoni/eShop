@@ -6,7 +6,7 @@ import java.util.Vector;
 import domain.exceptions.GetraenkExistiertBereitsException;
 import valueobjects.Getraenk;
 
-public class GetränkeManagment {
+public class GetraenkeManagment {
 	
 	private List<Getraenk> getraenkBestand = new Vector<Getraenk>();
 	

@@ -177,8 +177,8 @@ public class CUI {
 		if (liste.isEmpty()) {
 			System.out.println("Liste ist leer.");
 		} else {
-			for (Getraenk kurs: liste) {
-				System.out.println(kurs.toString());				
+			for (Getraenk getraenk: liste) {
+				System.out.println(getraenk.toString());				
 			}
 		}
 	}
